@@ -1,0 +1,158 @@
+$background-color: #141d2f;
+$background-color-app: #1e2a47;
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	color: white;
+}
+
+body {
+	display: grid;
+	place-items: center;
+	margin-top: 10rem;
+	background-color: $background-color;
+}
+
+.app {
+	display: flex;
+	flex-direction: column;
+	width: 700px;
+	gap: 1rem;
+
+	&__searchBar {
+		display: flex;
+		padding: 1rem 1rem 1rem 2rem;
+		background: $background-color-app;
+		border-radius: 15px;
+
+		form {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			width: 100%;
+		}
+
+		&-input {
+			display: flex;
+			align-items: center;
+			width: 100%;
+			gap: 1rem;
+
+			input {
+				width: 100%;
+				background: $background-color-app;
+				border: none;
+
+				&::placeholder {
+					color: white;
+				}
+
+				&:focus,
+				&:active {
+					outline: none;
+				}
+			}
+		}
+		button {
+			padding: 1rem 2rem;
+			background-color: #0079ff;
+			border: none;
+			border-radius: 10px;
+
+			&:hover {
+				cursor: pointer;
+			}
+		}
+	}
+
+	&__panel {
+		display: flex;
+		padding: 2rem;
+		gap: 2rem;
+		background: $background-color-app;
+		border-radius: 15px;
+
+		&-avatar {
+			img {
+				width: 117px;
+				height: 117px;
+				border-radius: 50%;
+			}
+		}
+
+		&-name {
+			word-break: break-word;
+			h1 {
+				width: 80%;
+				margin-top: 0;
+			}
+
+			p {
+				width: 80%;
+			}
+		}
+
+		&-login {
+			word-break: break-all;
+		}
+
+		&-date {
+			p {
+				margin-top: 0.2rem;
+			}
+		}
+
+		&-content {
+			width: 100%;
+		}
+
+		&-header {
+			display: flex;
+			justify-content: space-between;
+			width: 100%;
+		}
+
+		&-userInfo {
+			display: flex;
+			justify-content: space-between;
+			width: 100%;
+			padding: 0 4rem 0 2rem;
+			background: $background-color;
+			border-radius: 10px;
+		}
+
+		&-social {
+			display: flex;
+			width: 100%;
+			margin-top: 2rem;
+			gap: 2rem;
+
+			&-1,
+			&-2 {
+				display: flex;
+				flex-direction: column;
+				gap: 1rem;
+				width: 50%;
+			}
+
+			&-location,
+			&-twitter,
+			&-website,
+			&-company {
+				display: flex;
+				word-break: break-all;
+				gap: 1rem;
+
+				img {
+					height: 20px;
+				}
+
+				p {
+					margin: 0;
+				}
+			}
+		}
+	}
+}
